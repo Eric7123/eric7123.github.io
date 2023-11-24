@@ -336,6 +336,14 @@ main {
   border-radius: 20px;
 }
 
+.avatar-box img {
+  width: 80px;  /* Fixed width */
+  height: 150px; /* Fixed height */
+  border-radius: 20px; /* Border radius for rounded corners */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-3);
@@ -593,6 +601,15 @@ main {
   box-shadow: var(--shadow-1);
 }
 
+.testimonials-avatar-box img {
+  width: 80px;  /* Fixed width */
+  height: 80px; /* Fixed height */
+  border-radius: 30px; /* Half of width or height for a perfect circle */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+
+
 .testimonials-item-title { margin-bottom: 7px; }
 
 .testimonials-text {
@@ -702,6 +719,14 @@ main {
   margin-bottom: 15px;
   box-shadow: var(--shadow-2);
 }
+
+.modal-avatar-box img {
+  width: 80px;  /* Fixed width */
+  height: 80px; /* Fixed height */
+  border-radius: 40px; /* Half of width or height for a perfect circle */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
 
 .modal-img-wrapper > img { display: none; }
 
@@ -1005,6 +1030,7 @@ main {
 
 .project-title,
 .project-category { margin-left: 10px; }
+.project-description { margin-left: 10px; margin-bottom: 15px; color: var(--light-gray); font-size: var(--fs-8); font-weight: var(--fw-300); line-height: 1.6; }
 
 .project-title {
   color: var(--white-2);
@@ -1191,6 +1217,22 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
+/* Footer Styles */
+footer {
+  background-color: black; /* Dark background for footer */
+  color: white; /* White text color */
+  text-align: center; /* Center align the text */
+  padding: 20px 0; /* Padding for top and bottom */
+  position: relative; /* Ensures the footer is at the bottom */
+  bottom: 0; /* Align to the bottom */
+  width: 100%; /* Full width */
+}
+
+footer p {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-size: 16px; /* Set font size */
+}
 
 
 
@@ -1314,6 +1356,18 @@ textarea.form-input::-webkit-resizer { display: none; }
   .info-content .name { margin-bottom: 15px; }
 
   .info-content .title { padding: 5px 18px; }
+
+  .animated-title-container {
+    height: 40px; /* Adjust this height as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Centers the text vertically */
+  }
+  
+  /* Styles for the animated title text */
+  .animated-title {
+    min-height: 20px; /* Adjust based on the text size */
+  }
 
   .info_more-btn {
     top: -30px;

@@ -14,6 +14,37 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
+// Animated Title Variables and Function
+const titles = ["Software Engineer", "Researcher", "Frontend Developer", "Computer Science", "Data Science", "Game Design"];
+let currentTitle = 0;
+let letterCount = 0;
+let currentDirection = 1; // 1 for adding letters, -1 for removing letters
+
+const animatedTitleElement = document.querySelector('.animated-title'); // Ensure this selector matches your HTML
+
+function updateTitle() {
+  const title = titles[currentTitle];
+  animatedTitleElement.textContent = title.slice(0, letterCount);
+
+  if (currentDirection === 1) {
+    if (letterCount >= title.length) {
+      // Pause at the end of the word before deleting
+      setTimeout(() => { currentDirection = -1; }, 1000); // Adjust pause duration as needed
+    }
+  } else {
+    if (letterCount === 0) {
+      currentTitle = (currentTitle + 1) % titles.length;
+      currentDirection = 1;
+    }
+  }
+
+  letterCount += currentDirection;
+}
+
+setInterval(updateTitle, 120); // Adjust interval speed as needed
+
+
+
 
 
 // testimonials variables
