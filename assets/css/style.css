@@ -316,7 +316,7 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 170px;
   overflow: hidden;
   transition: var(--transition-2);
 }
@@ -337,7 +337,7 @@ main {
 }
 
 .avatar-box img {
-  width: 80px;  /* Fixed width */
+  width: 150px;  /* Fixed width */
   height: 150px; /* Fixed height */
   border-radius: 20px; /* Border radius for rounded corners */
   object-fit: cover; /* Ensures the image covers the area without stretching */
@@ -602,8 +602,8 @@ main {
 }
 
 .testimonials-avatar-box img {
-  width: 80px;  /* Fixed width */
-  height: 80px; /* Fixed height */
+  width: 70px;  /* Fixed width */
+  height: 70px; /* Fixed height */
   border-radius: 30px; /* Half of width or height for a perfect circle */
   object-fit: cover; /* Ensures the image covers the area without stretching */
 }
